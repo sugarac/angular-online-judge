@@ -1,0 +1,28 @@
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#profile">Personal Information</a></li>
+    <li><a data-toggle="pill" href="#password">Change Password</a></li>
+  </ul>
+
+  <hr>
+
+  <div class="tab-content">
+    <div id="profile" class="tab-pane fade in active">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email"
+        name="email" disabled value="{{email}}">
+      </div>
+      <div class="form-group">
+        <label for="username">User name</label>
+        <input type="text" class="form-control" id="usernmae"
+        name="username" disabled value="{{username}}">
+      </div>
+    </div>
+    <div id="password" class="tab-pane fade">
+      <form class="navbar-form">
+        <button type="button" class="btn btn-large btn-success" (click)="resetPassword()">Reset password via email</button>
+      </form>
+    </div>
+  </div>
+</div>

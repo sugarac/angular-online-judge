@@ -1,0 +1,12 @@
+<div class="container">
+  <app-new-problem></app-new-problem>
+  <div>My birthday is {{birthday | date: 'fullDate' | uppercase }}</div>
+  <div>My account balance is {{money | currency }} </div>
+  <div>My credit card Apt is {{Apr | percent }}</div>
+  <div class="list-group">
+    <a class="list-group-item" *ngFor="let problem of problems | search: searchTerm" [routerLink]="['/problems', problem.id]">
+      <span class="{{'pull-left label difficulty diff-' + problem.difficulty.toLocaleLowerCase()}}">{{problem.difficulty | uppercase}}</span>
+      <strong class="title">{{problem.id}}. {{problem.name}}</strong>
+    </a>
+  </div>
+</div>

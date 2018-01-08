@@ -1,0 +1,28 @@
+<div *ngIf="authGuard.isAdmin()">
+  <form #formRef="ngForm">
+    <div class="form-group">
+      <label for="problemName">Problem Name</label>
+      <input type="text" class="form-control" id="problemName"
+      name="problemName" required placeholder="Enter Problem Name" [(ngModel)]="newProblem.name">
+    </div>
+    <div class="form-group">
+      <label for="problemDesc">Problem Description</label>
+      <textarea type="text" row="3" class="form-control" id="problemDesc"
+      name="problemDesc" required placeholder="Enter Problem DEscription" [(ngModel)]="newProblem.desc"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="difficulty">Difficulty</label>
+      <select class="form-control" id="difficulty"
+      name="difficulty" [(ngModel)]="newProblem.difficulty">
+        <option *ngFor="let difficulty of difficulties" [value]="difficulty">
+          {{difficulty}}
+        </option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-primary pull-right" (click)="addProblem()">Add Problem</button>
+      </div>
+    </div>
+  </form>
+</div>
