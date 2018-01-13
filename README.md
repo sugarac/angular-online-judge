@@ -4,7 +4,7 @@ I designed a single-page web application for coding, running, and compiling prob
 To refactored and improved system throughput, I used decoupling services based on RESTful API and loaded balancing by Nginx. 
 
 ## Tech Stack
-Frontend: Angular2 + TypeScript + Bootstrap + ACE  
+Frontend: Angular2 + TypeScript + Bootstrap + Auth0 + ACE  
 Backend: Socket.io + Express + MongoDB + Redis + Python + Flask + AWS + Nginx + PM2
 
 ## Project Architecture
